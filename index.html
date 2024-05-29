@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="bookmark.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bookmark</title>
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="header d-flex justify-content-center mb-4">
+            <h1>Bookmarker</h1>
+        </div>
+        <div class="row flex-column align-items-center">
+            <div class="col-12">
+                <div class="bookmark-input my-4 px-3">
+                    <h3 class="text-center mt-3"> <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i
+                            class="fa-solid fa-bookmark"></i> </h3>
+                    <div class="mb-4 col-12">
+                        <i class="fa-solid fa-book-bookmark pe-2"></i>
+                        <label for="siteName" class="form-label fw-bold"> Site Name</label>
+                        <input type="text" class="form-control" id="siteName" placeholder="Bookmark Name"
+                            oninput="validation(this)">
+                        <span class="text-danger d-none my-2">*Please enter a valid website name with at least 3
+                            alphanumeric characters (letters and digits only). </span>
+                    </div>
+                    <div class="my-4">
+                        <i class="fa-solid fa-link pe-2"></i>
+                        <label for="siteURL" class="form-label fw-bold">Site URL</label>
+                        <input type="text" class="form-control" id="siteURL" placeholder="Website URL"
+                            oninput="validation(this)">
+                        <span class="text-danger d-none my-2">*Please enter a valid URL with a proper domain and
+                            top-level domain (e.g., .com, .org), optionally starting with "www."</span>
+                    </div>
+                    <div class="mb-4 text-center">
+                        <button type="button" class="btn btn-main text-white" onclick="createSite()" id="submitBtn">
+                            Submit
+                        </button>
+                    </div>
+                    <div class="mb-4 text-center">
+                        <button type="button" class="btn btn-main text-white d-none" onclick="updateSite()"
+                            id="updateBtn">
+                            Update
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <table class="table shadow-lg text-center">
+                    <div class="input-group my-4">
+                        <input type="text" class="form-control search-input bg-transparent rounded-2 border-search"
+                            placeholder="Search here..." aria-label="Recipient's username"
+                            aria-describedby="button-addon2" id="searchInput" oninput="searchSite();
+                            ">
+                    </div>
+                    <thead>
+                        <tr>
+                            <th scope="col">Index</th>
+                            <th scope="col">Website Name</th>
+                            <th scope="col" colspan="3">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
