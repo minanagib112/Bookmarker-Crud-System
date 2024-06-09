@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="bookmark.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="header d-flex justify-content-center mb-4">
+            <h1>Sign Up</h1>
+        </div>
+        <div class="row flex-column align-items-center">
+            <div class="col-12">
+                <div class="signup-input my-4 shadow-lg p-5 rounded-3 ">
+                    <span class="text-danger text-center d-none" id="error"></span>
+                    <h3 class="text-center mt-3"><i class="fa-solid fa-user-plus"></i> Create an Account <i
+                            class="fa-solid fa-user-plus"></i></h3>
+                    <div class="mb-4 col-12">
+                        <i class="fa-solid fa-user pe-2"></i>
+                        <label for="signupUsername" class="form-label fw-bold">Username</label>
+                        <input type="text" class="form-control" id="signupUsername" placeholder="Username"
+                            oninput="validation(this)">
+
+                        <span class="text-danger d-none my-2">*Please enter a valid username with at least 3
+                            alphanumeric characters.</span>
+                    </div>
+                    <div class="my-4">
+                        <i class="fa-solid fa-envelope pe-2"></i>
+                        <label for="signupEmail" class="form-label fw-bold">Email</label>
+                        <input type="email" class="form-control" id="signupEmail" placeholder="Email"
+                            oninput="validation(this)">
+
+                        <span class="text-danger d-none my-2">*Please enter a valid email address.</span>
+                    </div>
+                    <div class="my-4">
+                        <i class="fa-solid fa-key pe-2"></i>
+                        <label for="signupPassword" class="form-label fw-bold">Password</label>
+                        <input type="password" class="form-control" id="signupPassword" placeholder="Password"
+                            oninput="validation(this)">
+
+                        <span class="text-danger d-none my-2">*Password must be at least 8 characters long and include
+                            at least one number and one special character.</span>
+                    </div>
+                    <div class="mb-4 text-center">
+                        <button type="button" class="btn btn-main text-white" onclick="createAccount()"
+                            id="signupBtn">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/signUp.js"></script>
+</body>
+
+</html>

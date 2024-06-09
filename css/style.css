@@ -1,48 +1,63 @@
 :root {
   --main-color: #fec260;
 }
+
 body {
   background-color: #f7ecde;
-  font-family: PT Sans Caption;
+  font-family: "PT Sans Caption", sans-serif;
   caret-color: var(--main-color);
 }
 ::selection {
   background-color: #fec260;
   color: white;
 }
+
 ::-webkit-scrollbar {
   width: 5px;
 }
+
 ::-webkit-scrollbar-track {
   background-color: #f7ecde;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
   border-radius: 5px;
 }
+
 .btn-main {
   background-color: #bb4120;
   padding: 5px 50px;
 }
+
 .btn-visit {
   background-color: #8a9e23;
 }
+
 .btn-visit:hover {
   background-color: #5a6e13;
 }
+
 .btn-main:hover {
   background-color: darkred;
 }
-.bookmark-input {
+
+.bookmark-input{
   border-top: 2px dotted black;
   border-bottom: 2px dotted black;
 }
-.header h1 {
-  font-family: Pacifico;
+
+.header h1, .logo {
+  font-family: "Pacifico", cursive;
   font-weight: 500;
   font-size: 50px;
   position: relative;
   width: fit-content;
+}
+.logo{
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
 }
 .header h1::before {
   content: "";
@@ -56,27 +71,34 @@ body {
   z-index: -1;
   transition: all 0.5s;
 }
+
 .header h1:hover::before {
   height: 35px;
 }
+
 .border-search {
   border-color: var(--main-color) !important;
   box-shadow: 0 1px 0 0 var(--main-color);
 }
+
 .input-group .search-input::placeholder {
-  font-family: PT Sans Caption;
+  font-family: "PT Sans Caption", sans-serif;
   color: #bb4120;
   font-weight: 900;
   font-style: oblique;
   text-shadow: 0 1px 0 0 black;
 }
+
 .input-group .search-input:focus {
   box-shadow: 0 1px 0 0 var(--main-color);
 }
-.bookmark-input h3 {
-  font-family: Righteous;
+
+.bookmark-input h3,
+.signup-input h3,
+.login-input h3 {
+  font-family: "Righteous", sans-serif;
   font-size: 25px;
-  font-family: 500;
+  font-weight: 500;
   background: linear-gradient(
     90deg,
     rgba(60, 165, 92, 1) 30%,
@@ -85,12 +107,22 @@ body {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
+
 td {
   vertical-align: middle;
 }
+
 .form-control:focus {
   background-color: var(--bs-body-bg);
   border-color: #d99c39;
   outline: 0px;
   box-shadow: 0 0 0 0.25rem #fec26055;
+}
+.welcome{
+  color: #bb4120;
+  font-weight: 400;
+  font-family: "Righteous", sans-serif;
+  font-size: 30px;
+  text-transform: capitalize;
+
 }
