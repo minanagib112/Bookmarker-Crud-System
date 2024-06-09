@@ -145,12 +145,8 @@ function validation(element) {
 
 // Authentication
 function auth() {
-  if (localStorage.getItem("currentUser")) {
-    var currentUser = JSON.parse(localStorage.getItem("currentUser"));
-    userName.innerHTML =
-      "<span class='welcome'>Hello " + currentUser.username + "</span>";
-    loginBtn.classList.replace("d-block", "d-none");
-    logoutBtn.classList.replace("d-none", "d-block");
+  if (!localStorage.getItem("currentUser")) {
+    window.location.href = "login.html";
   }
 }
 auth();
@@ -158,10 +154,5 @@ auth();
 // Logout
 function logout() {
   localStorage.removeItem("currentUser");
-  window.location.href = "login.html";
-}
-
-// Login
-function login() {
   window.location.href = "login.html";
 }
