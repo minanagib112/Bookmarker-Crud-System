@@ -156,3 +156,9 @@ function logout() {
   localStorage.removeItem("currentUser");
   window.location.href = "login.html";
 }
+//Display username
+function displayUserName() {
+  var currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  userName.innerHTML = `Welcome ${currentUser.username}`;
+}
+displayUserName()
