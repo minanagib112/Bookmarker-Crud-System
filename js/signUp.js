@@ -53,7 +53,6 @@ function validation(element) {
 }
 //Email already exists
 function emailAlreadyExists() {
-  var users = JSON.parse(localStorage.getItem("users"));
   for (var i = 0; i < users.length; i++) {
     if (users[i].email == signupEmail.value) {
       document.getElementById("error").classList.replace("d-none", "d-block");
